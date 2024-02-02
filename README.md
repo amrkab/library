@@ -1,1 +1,1 @@
-# library
+This project demonstrates ability to build an intermediate level project with HTML, CSS and JavaScript
