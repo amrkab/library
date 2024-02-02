@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-text">
+            Library
+        </div>
+    </header>
+
+
+    <main class="main container">
+        <div id="open-modal-container"><button data-open-modal>Add a Book</button></div>
+        
+        <div class="library"></div>
+    </main>
+
+    <dialog data-modal>
+        <form data-modal-form method="dialog">
+
+            <input type="text" id="book-title" placeholder="Title" required maxlength="100">
+            
+            <input type="text" id="book-author" placeholder="Author" required maxlength="100">
+            
+            <input type="number" id="pages" placeholder="Pages" required max="10000">
+            
+            <label for="">Have you read it?<input type="checkbox" class="checkbox" value="Yes"></label>
+            
+            <div class="buttons">
+                <button type="submit" id="submit-btn">Submit</button>
+                <button class="cancel-btn">Cancel</button>
+            </div>
+
+        </form>
+    </dialog>
+
+    
+    <script src="app.js"></script>
+</body>
+</html>
