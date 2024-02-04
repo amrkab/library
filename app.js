@@ -119,10 +119,6 @@ openButton.addEventListener('click', () => {
     modal.showModal();
 });
 
-cancelButton.addEventListener('click', e => {
-    modal.close();
-});
-
 modal.addEventListener("click", e => {
     const dialogDimensions = modal.getBoundingClientRect();
     if (
@@ -135,3 +131,5 @@ modal.addEventListener("click", e => {
         modal.close();
     }
 });
+
+

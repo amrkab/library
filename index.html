@@ -16,7 +16,7 @@
 
 
     <main class="main container">
-        <div id="open-modal-container"><button data-open-modal>Add a Book</button></div>
+        <div id="open-modal-container"><button data-open-modal>+ Add Book</button></div>
         
         <div class="library"></div>
     </main>
@@ -24,18 +24,22 @@
     <dialog data-modal>
         <form data-modal-form method="dialog">
 
+            <input type="hidden">
+
             <input type="text" id="book-title" placeholder="Title" required maxlength="100">
             
             <input type="text" id="book-author" placeholder="Author" required maxlength="100">
             
             <input type="number" id="pages" placeholder="Pages" required max="10000">
             
-            <label for="">Have you read it?<input type="checkbox" class="checkbox" value="Yes"></label>
+            <div id="checkbox-container">
+                <label for="checkbox-container">Have you read it?</label>
+                <input type="checkbox" class="checkbox" value="Yes" id="read-check">
+                </div>
             
-            <div class="buttons">
+            <!-- <div class="buttons"> -->
                 <button type="submit" id="submit-btn">Submit</button>
-                <button class="cancel-btn">Cancel</button>
-            </div>
+            <!-- </div> -->
 
         </form>
     </dialog>

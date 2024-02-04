@@ -8,6 +8,7 @@
 
 body {
     min-height: 100vh;
+    background-color: rgb(225, 224, 224);
 }
 
 header{
@@ -18,6 +19,8 @@ header{
     font-size: 3rem;
     font-weight: 600;
     color: #772e00;
+    background-color: white;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -34,13 +37,12 @@ header{
 .library{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 40px;
-    margin-top: 40px;
+    gap: 35px;
 }
 
 .library .card-container{
     height: 302.5px;
-    margin: 5px;
+    margin: 10px;
 
     background-color: rgb(255, 227, 200);
     border-radius: 7px;
@@ -66,8 +68,6 @@ header{
     font-style: italic;
     font-family: 'Times New Roman', Times, serif;
 }
-
-
 
 .img-container{
     grid-template-columns: 2fr 1fr;
@@ -111,20 +111,17 @@ dialog {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 35px;
+    padding: 15px;
     height: fit-content;
+    border-radius: 20px;
 }
 
 dialog::backdrop {
-    background-color: hsla(0, 0%, 0%, 0.4);
+    background-color: hsla(0, 0%, 0%, 0.5);
 }
 
 #open-modal-container{
     margin: 30px;
-}
-
-[data-modal]{
-    border-radius: 20px;
 }
 
 [data-open-modal] {
@@ -133,7 +130,7 @@ dialog::backdrop {
     font-weight: bolder;
     background-color: rgb(255, 227, 200);
     border: 2px solid #772e00;
-    font-size: 0.9rem;
+    font-size: 1.4rem;
     transition: transform 0.3s ease; /* Add transition for smooth animation */
 }
 
@@ -142,16 +139,57 @@ dialog::backdrop {
     transform: scale(1.05); /* Scale the button on hover */
 }
 
-
 [data-modal-form]{
     height: 300px;
     width: 300px;
-    display: grid;
-    grid-template-rows: repeat(5, 1fr);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-[data-modal-form] input#yes:hover{
-cursor: pointer;
+[data-modal-form]>input{
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1.2rem;;
+}
+
+[data-modal-form]>div>label{
+    font-size: 1.2rem;
+    margin-right: 20px;
+}
+
+#checkbox-container{
+    display: flex;
+    justify-content: center;
+}
+
+[data-modal-form] input#read-check{
+    margin-top:px;
+    line-height: normal;
+    width: 25px;
+    height: 25px;
+}
+
+[data-modal-form] input#read-check:checked{
+    accent-color: rgb(255, 227, 200);
+}
+
+[data-modal-form] input#read-check:hover{
+    cursor: pointer;
+}
+
+#submit-btn{
+    border-radius: 10px;
+    background-color: rgb(255, 227, 200);
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: filter 0.15s ease-in-out;
+    padding: 10px;
+}
+
+#submit-btn:hover{
+    filter:brightness(90%);
+    cursor: pointer;
 }
 
 
